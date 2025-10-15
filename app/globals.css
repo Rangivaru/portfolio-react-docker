@@ -2,7 +2,7 @@
 
 :root {
   color: white;
-  background-color: #0E1117;
+  background-color: #0e1117;
 }
 
 .grid-row {
@@ -10,4 +10,15 @@
   height: 10px;
   grid-template-columns: repeat(52, 10px); /* 52 weeks for a year */
   gap: 4px;
+}
+
+@theme inline {
+  /* Tailwind CSS Custom Colors **/
+  --color-orange: #f78066;
+  --color-orange-light: #f8937c;
+  --color-black: #02040a;
+  --color-gray: #161b22;
+  --color-gray-light: #7d8590;
+  --color-gray-lighter: #21262d;
+  --color-gray-border: #30363d;
 }

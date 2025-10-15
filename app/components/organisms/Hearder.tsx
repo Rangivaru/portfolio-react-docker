@@ -1,10 +1,4 @@
 import { tabs } from "@/app/data/tabs";
-import {
-  ExperiencesIcon,
-  PresentationIcon,
-  ProjectsIcon,
-  SunIcon,
-} from "../atoms/icons";
 import Image from "next/image";
 import { useState } from "react";
 
@@ -36,8 +30,7 @@ export function Header({ handleTabClick, tab }: Props) {
               xmlns="http://www.w3.org/2000/svg"
               width="32"
               height="32"
-              viewBox="0 0 24 24"
-            >
+              viewBox="0 0 24 24">
               <path
                 fill="none"
                 stroke="currentColor"
@@ -57,8 +50,7 @@ export function Header({ handleTabClick, tab }: Props) {
                       onClick={() => handleTabClick(index)}
                       className={`h-full relative flex items-center text-sm ${
                         tab === index && "font-semibold"
-                      }`}
-                    >
+                      }`}>
                       {tab === index && (
                         <span className="w-full h-0.5 bg-orange  absolute -bottom-2 rounded-md "></span>
                       )}
@@ -85,8 +77,7 @@ export function Header({ handleTabClick, tab }: Props) {
                 onClick={() => handleTabClick(index)}
                 className={`h-full flex items-center text-sm ${
                   tab === index && "font-semibold"
-                }`}
-              >
+                }`}>
                 <span className="text-white py-1 px-2 group-hover:bg-gray rounded-md flex items-center gap-2">
                   {item.icon}
                   {item.title}
