@@ -9,8 +9,9 @@ export const sidebarData = {
   name: "Rangivaru Salem",
   job: "Lead développeur .NET",
   age: `${calculateAge()} ans`,
-  location: "Bordeaux, 33400",
+  location: "Bordeaux, 33000",
   enterprise: "Cdiscount",
+  school: "IUT de Bordeaux",
   languages: ["🇬🇧 Anglais"],
   links: [
     {
