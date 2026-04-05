@@ -5,46 +5,54 @@ import { InfoSection } from "./_components";
 
 export function Sidebar() {
   return (
-    <div className="md:min-w-[289px] md:w-[289px] md:max-w-[289px]  flex flex-col ">
-      <div className="flex md:flex-col items-center md:items-start md:gap-0 gap-6 md:mb-0 mb-4 ">
+    <div className="md:min-w-[289px] md:w-[289px] md:max-w-[289px] flex flex-col">
+
+      {/* Photo + Nom : côte à côte sur mobile, empilés sur desktop */}
+      <div className="flex md:flex-col items-center md:items-start gap-4 md:gap-0">
         <img
-          src="/logo.png"
-          alt={"Profile Picture"}
-          className="w-full max-w-[120px] md:max-w-full md:w-full border border-gray-border aspect-square bg-black rounded-full"
+          src="/profile.png"
+          alt="Profile Picture"
+          className="w-[72px] h-[72px] md:w-full md:h-[340px] shrink-0 border border-gray-border bg-black rounded-full md:rounded-[45%] object-cover object-top"
         />
-        <div className="py-3">
-          <h1 className="text-2xl font-semibold">{sidebarData.name}</h1>
-          <h2 className="text-xl text-gray-light">{sidebarData.job}</h2>
+        <div className="py-0 md:py-3">
+          <h1 className="text-xl md:text-2xl font-semibold">{sidebarData.name}</h1>
+          <h2 className="text-base md:text-xl text-gray-light">{sidebarData.job}</h2>
         </div>
-        <a
-          href="mailto:rangivaru.salem@gmail.com"
-          className="w-full rounded-md py-2 font-medium text-sm bg-orange text-center hover:bg-orange-light">
-          rangivaru.salem@gmail.com
-        </a>
-        <div className="my-4">
-          <p className="text-sm">
-            {" "}
-            {sidebarData.age} · {sidebarData.location}
-          </p>
-        </div>
-        <div className="flex items-center gap-1">
+      </div>
+
+      {/* Email */}
+      <a
+        href="mailto:rangivaru.salem@gmail.com"
+        className="w-full rounded-md py-2 font-medium text-sm bg-orange text-center hover:bg-orange-light mt-4"
+      >
+        rangivaru.salem@gmail.com
+      </a>
+
+      {/* Infos */}
+      <div className="mt-4 flex flex-col gap-1">
+        <p className="text-sm text-gray-light">
+          {sidebarData.age} · {sidebarData.location}
+        </p>
+        <div className="flex items-center gap-1 mt-1">
           <EntrepriseIcon />
           <p className="text-sm">{sidebarData.enterprise}</p>
         </div>
-        <div className="flex items-center gap-1 pt-1">
+        <div className="flex items-center gap-1 mt-1">
           <SchoolIcon />
           <p className="text-sm">{sidebarData.school}</p>
         </div>
-        <InfoSection title="Liens utiles" className="mb-8">
-          <div className="flex items-center gap-5">
-            {sidebarData.links.map((link, index) => (
-              <a href={link.href} target="_blank" key={index}>
-                {link.icon}
-              </a>
-            ))}
-          </div>
-        </InfoSection>
       </div>
+
+      {/* Liens utiles */}
+      <InfoSection title="Liens utiles" className="mb-8">
+        <div className="flex items-center gap-5">
+          {sidebarData.links.map((link, index) => (
+            <a href={link.href} target="_blank" key={index}>
+              {link.icon}
+            </a>
+          ))}
+        </div>
+      </InfoSection>
     </div>
   );
 }

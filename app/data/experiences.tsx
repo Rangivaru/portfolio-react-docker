@@ -1,61 +1,38 @@
-export const years = [2025, 2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015];
-export const months = ["Janv.", "Fév.", "Mars", "Avril", "Mai", "Juin", "Juil.", "Aout", "Sept.", "Oct.", "Nov.", "Dec."]
+export interface Experience {
+    id: number;
+    organization: string;
+    role: string;
+    type: 'school' | 'work';
+    startDate: string;   // format "YYYY-MM"
+    endDate: string;     // "YYYY-MM" ou "present"
+    color: string;       // hex pour inline style
+    description?: string;
+}
 
-export const schoolsAndEnterprises = [
-    {title : 'Cdiscount interne', color: "bg-blue-rjs"},
-    {title : 'Cdiscount externe (Group Créative)', color: "bg-blue-esgi-light"},
-    {title : 'Gestform', color: "bg-orange-vinci"},
-    {title : 'IUT Bordeaux (L3)', color: "bg-red-stnicolas"},
-]
+export const experiences: Experience[] = [
+    { id: 1, organization: 'Cdiscount', role: 'Lead Développeur (interne)', type: 'work', startDate: '2023-03', endDate: 'present', color: '#E63946' },
+    { id: 2, organization: 'Group Créative (Cdiscount)', role: 'Développeur Full-Stack', type: 'work', startDate: '2019-09', endDate: '2023-03', color: '#4361EE' },
+    { id: 3, organization: 'Gestform', role: 'Développeur .net', type: 'work', startDate: '2016-10', endDate: '2019-08', color: '#F4820A' },
+    { id: 4, organization: 'IUT de Bordeaux', role: 'Licence Pro L3 / Alternance', type: 'school', startDate: '2015-09', endDate: '2016-09', color: '#2DC653' },
+    { id: 5, organization: 'Lycée Taaone', role: 'BTS Systèmes informatiques aux organisations', type: 'school', startDate: '2013-09', endDate: '2015-06', color: '#2DC653' },
+    { id: 6, organization: 'Gestform', role: 'Développeur .net', type: 'work', startDate: '2015-09', endDate: '2016-07', color: '#F4820A' },
+];
 
-export const theData = [
-    {
-        year: 2024,
-        content: [
-            [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-            [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-        ]
-    },
-    {
-        year: 2023,
-        content: [
-            [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3,],
-            [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,],
-        ]
-    },
-    {
-        year: 2022,
-        content: [
-            [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 0, 0, 0, 0, 0, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3,],
-            [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,],
-        ]
-    },
-    {
-        year: 2021,
-        content: [
-            [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 0, 0, 0, 0, 0, 0, 0, 0, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,],
-            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,],
-        ]
-    },
-    {
-        year: 2020,
-        content: [
-            [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 0, 0, 0, 0, 0, 0, 0, 0, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5,],
-            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,],
-        ]
-    },
-    {
-        year: 2019,
-        content: [
-            [6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 0, 0, 0, 0, 0, 0, 0, 0, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5,],
-            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,],
-        ]
-    },
-    {
-        year: 2015,
-        content: [
-            [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 0, 0, 0, 0, 0, 0, 0, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5,],
-            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,],
-        ]
-    },
-]
+export type TimelineGroup = { schoolId: number | null; workId: number | null };
+
+export const timelineGroups: TimelineGroup[] = [
+    { schoolId: null, workId: 1 },
+    { schoolId: null, workId: 2 },
+    { schoolId: null, workId: 3 },
+    { schoolId: 4, workId: 6 },
+    { schoolId: 5, workId: null },
+];
+
+export function formatDateRange(start: string, end: string): string {
+    const monthsFR = ['Janv.', 'Fév.', 'Mars', 'Avr.', 'Mai', 'Juin', 'Juil.', 'Août', 'Sept.', 'Oct.', 'Nov.', 'Déc.'];
+    const fmt = (d: string) => {
+        const [y, m] = d.split('-');
+        return `${monthsFR[parseInt(m) - 1]} ${y}`;
+    };
+    return `${fmt(start)} – ${end === 'present' ? 'Présent' : fmt(end)}`;
+}

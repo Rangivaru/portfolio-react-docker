@@ -19,7 +19,13 @@ export function Presentation({ sectionRef }: PresentationProps) {
       </p>
       <Separator />
       <p className="mt-4 mb-16 sm:text-base text-sm ">
-        blabla presentation blabla presentation blabla presentation blabla
+        Développeur Full-Stack passionné basé à Bordeaux, j'évolue dans le monde du développement depuis plus de 10 ans.
+        Actuellement <strong>Lead Développeur chez Cdiscount</strong>, je conçois et pilote des solutions techniques à fort impact,
+        de l'architecture back-end à l'expérience utilisateur.
+        <br /><br />
+        Mon parcours, jalonné d'expériences en alternance et de formations en informatique, m'a permis de développer une expertise
+        solide sur des environnements complexes et des stacks modernes. J'aime relever des défis techniques, travailler en équipe
+        et contribuer à des projets ambitieux.
       </p>
       <Stack />
     </div>

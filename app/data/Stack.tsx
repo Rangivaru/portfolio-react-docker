@@ -4,6 +4,7 @@ import {
   KafkaLogo,
   KubLogo,
   MongoDbLogo,
+  ReactLogo,
 } from "../components/atoms/logos/logos";
 
 export const StackData = [
@@ -26,5 +27,9 @@ export const StackData = [
   {
     logo: <KubLogo />,
     name: "Kubernetes",
+  },
+  {
+    logo: <ReactLogo />,
+    name: "React",
   },
 ];
