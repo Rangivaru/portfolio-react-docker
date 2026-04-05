@@ -27,7 +27,7 @@ export const projects: ProjectsDTO[] = [
         year: 2025,
         title: "Portfolio",
         description: "Portfolio personnel présentant mes projets et compétences.",
-        href: "https://portfolio-react-docker-9sjyi0ybf-rangivarus-projects.vercel.app",
+        href: "https://portfolio-react-docker.vercel.app",
         technos: [
             {color: NEXT_COLOR, label: NEXT_NAME},
             {color: REACT_COLOR, label: REACT_NAME},
