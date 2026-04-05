@@ -7,7 +7,7 @@ function calculateAge() {
 
 export const sidebarData = {
   name: "Rangivaru Salem",
-  job: "Lead développeur .NET",
+  job: "Lead développeur",
   age: `${calculateAge()} ans`,
   location: "Bordeaux, 33000",
   enterprise: "Cdiscount",

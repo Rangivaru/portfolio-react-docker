@@ -1,13 +1,11 @@
-export const years = [2024, 2023, 2022, 2021, 2020, 2019]
+export const years = [2025, 2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015];
 export const months = ["Janv.", "Fév.", "Mars", "Avril", "Mai", "Juin", "Juil.", "Aout", "Sept.", "Oct.", "Nov.", "Dec."]
 
 export const schoolsAndEnterprises = [
-    {title : 'SNCF Réseau', color: "bg-red-sncf"},
-    {title : 'EFREI (Master)', color: "bg-blue-efrei"},
-    {title : 'Agence RJS', color: "bg-blue-rjs"},
-    {title : 'ESGI (Bachelor)', color: "bg-blue-esgi-light"},
-    {title : 'Lycée Léonard de Vinci (BTS)', color: "bg-orange-vinci"},
-    {title : 'Lycée St-Nicolas (Bac)', color: "bg-red-stnicolas"},
+    {title : 'Cdiscount interne', color: "bg-blue-rjs"},
+    {title : 'Cdiscount externe (Group Créative)', color: "bg-blue-esgi-light"},
+    {title : 'Gestform', color: "bg-orange-vinci"},
+    {title : 'IUT Bordeaux (L3)', color: "bg-red-stnicolas"},
 ]
 
 export const theData = [
@@ -50,6 +48,13 @@ export const theData = [
         year: 2019,
         content: [
             [6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 0, 0, 0, 0, 0, 0, 0, 0, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5,],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,],
+        ]
+    },
+    {
+        year: 2015,
+        content: [
+            [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 0, 0, 0, 0, 0, 0, 0, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5,],
             [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,],
         ]
     },

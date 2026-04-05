@@ -3,6 +3,7 @@ import { Header } from "./components/organisms/Hearder";
 import { useRef, useState } from "react";
 import { Sidebar } from "./components/organisms/Sidebar";
 import { Presentation } from "./components/organisms/Presentation";
+import Experiences from "./components/organisms/Experiences";
 
 export default function Home() {
   const sectionRefs = [
@@ -22,12 +23,15 @@ export default function Home() {
   return (
     <main className="flex flex-col">
       <Header tab={tab} handleTabClick={handleTabClick} />
-      <div className="w-full max-w-[1216px] xl:px-0 px-4 flex flex-col md:flex-row gap-5">
-        <Sidebar />
-        <div className="grid grid-cols-1 ">
-          <Presentation sectionRef={sectionRefs[0]} />
+      <section className='w-full m-auto flex justify-center'>
+        <div className="w-full max-w-[1216px] xl:px-0 px-4 flex flex-col md:flex-row gap-5">
+          <Sidebar />
+          <div className="grid grid-cols-1 ">
+            <Presentation sectionRef={sectionRefs[0]} />
+            <Experiences sectionRef={sectionRefs[1]} />
+          </div>
         </div>
-      </div>
+      </section>
     </main>
   );
 }
