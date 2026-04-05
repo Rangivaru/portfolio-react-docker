@@ -55,22 +55,38 @@ export default function CV() {
       <style>{`
         @page {
           size: A4 portrait;
-          margin: 5mm;
+          margin: 2mm;
         }
         @media print {
           .no-print { display: none !important; }
           html, body { margin: 0; padding: 0; }
           * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
           .cv-print-root {
-            zoom: 0.64;
-            padding: 16px !important;
+            zoom: 0.76;
+            width: calc(206mm / 0.76) !important;
+            height: calc(293mm / 0.76) !important;
             min-height: unset !important;
+            padding: 16px !important;
+            box-sizing: border-box !important;
+            overflow: hidden !important;
+            display: flex !important;
+            flex-direction: column !important;
+          }
+          .cv-inner {
+            flex: 1 !important;
+            max-width: 100% !important;
+            margin: 0 auto !important;
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 10px !important;
+            justify-content: flex-start !important;
+            justify-content: space-between !important;
           }
         }
       `}</style>
 
       <div className="cv-print-root" style={{ backgroundColor: C.pageBg, minHeight: '100vh', padding: '40px 20px', fontFamily: 'sans-serif' }}>
-        <div style={{ maxWidth: '860px', margin: '0 auto', display: 'flex', flexDirection: 'column', gap: '14px' }}>
+        <div className="cv-inner" style={{ maxWidth: '860px', margin: '0 auto', display: 'flex', flexDirection: 'column', gap: '14px' }}>
 
           {/* ── Bouton téléchargement PDF ── */}
           <div className="no-print" style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: '4px' }}>
@@ -145,8 +161,9 @@ export default function CV() {
                 'rangivaru.salem@gmail.com',
                 'Bordeaux, 33000',
                 '31 ans',
-                'linkedin.com/in/rangivaru-salem',
-                'github.com/Rangivaru',
+                'https://www.linkedin.com/in/rangivaru-salem-8a9444135/',
+                'https://github.com/Rangivaru',
+                'https://rangivaru-portfolio.vercel.app',
               ].map((line, i) => (
                 <p key={i} style={{ color: C.textLight, fontSize: '0.72rem', marginBottom: '8px' }}>{line}</p>
               ))}
