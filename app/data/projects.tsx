@@ -40,57 +40,5 @@ export const projects: ProjectsDTO[] = [
             {color: FIGMA_COLOR, label: FIGMA_NAME},
             {color: SPOTIFY_COLOR, label: API_SPOTIFY},
         ],
-    },
-    {
-        id: 2,
-        year: 2022,
-        title: "Boutique du Club de BMX de Verrières le Buisson",
-        description: "Demo de la Boutique en ligne pour le club de BMX de Verrières le Buisson.",
-        href: "https://shop-vb-bmx.pages.dev/",
-        technos: [
-            {color: NEXT_COLOR, label: NEXT_NAME},
-            {color: NODE_COLOR, label: NODE_NAME},
-            {color: STRIPE_COLOR, label: STRIPE_NAME},
-            {color: FIGMA_COLOR, label: FIGMA_NAME},
-            {color: STORYBOOK_COLOR, label: STORYBOOK_NAME},
-        ],
-    },
-    {
-        id: 3,
-        year: 2023,
-        title: "Comptheures",
-        description: "SaaS de gestion de comptes d'heures pour les entreprises.",
-        href: "https://comptheures.fr",
-        technos: [
-            {color: NEXT_COLOR, label: NEXT_NAME},
-            {color: NODE_COLOR, label: NODE_NAME},
-            {color: FIGMA_COLOR, label: FIGMA_NAME},
-            {color: STORYBOOK_COLOR, label: STORYBOOK_NAME},
-        ],
-    },
-    {
-        id: 4,
-        year: 2023,
-        title: "Masteries Biscotte Family",
-        description: "Application de consultation des points de maitrise des champions du jeu League of Legends.",
-        href: "https://masteries.biscottefamily.fr",
-        technos: [
-            {color: REACT_COLOR, label: REACT_NAME},
-            {color: NODE_COLOR, label: NODE_NAME},
-            {color: FIGMA_COLOR, label: FIGMA_NAME},
-        ],
-    },
-    {
-        id: 5,
-        year: 2022,
-        title: "Bonappli",
-        description: "SaaS de création de menus pour les restaurants.",
-        href: "https://bonappli.fr",
-        technos: [
-            {color: REACT_COLOR, label: REACT_NAME},
-            {color: NODE_COLOR, label: NODE_NAME},
-            {color: NEXT_COLOR, label: NEXT_NAME},
-            {color: FIGMA_COLOR, label: FIGMA_NAME},
-        ],
-    },
+    }
 ];

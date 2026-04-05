@@ -5,6 +5,9 @@ import {
   KubLogo,
   MongoDbLogo,
   ReactLogo,
+  SnowflakeLogo,
+  ScrumLogo,
+  AILogo,
 } from "../components/atoms/logos/logos";
 
 export const StackData = [
@@ -31,5 +34,17 @@ export const StackData = [
   {
     logo: <ReactLogo />,
     name: "React",
+  },
+  {
+    logo: <SnowflakeLogo />,
+    name: "Snowflake",
+  },
+  {
+    logo: <ScrumLogo />,
+    name: "Scrum",
+  },
+  {
+    logo: <AILogo />,
+    name: "IA",
   },
 ];

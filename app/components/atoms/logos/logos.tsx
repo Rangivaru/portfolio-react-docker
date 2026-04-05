@@ -102,6 +102,69 @@ export function DockerLogo() {
   );
 }
 
+export function SnowflakeLogo() {
+  return (
+    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+      {/* Axes principaux */}
+      <line x1="20" y1="3" x2="20" y2="37" stroke="#29B5E8" strokeWidth="2.5" strokeLinecap="round"/>
+      <line x1="3" y1="20" x2="37" y2="20" stroke="#29B5E8" strokeWidth="2.5" strokeLinecap="round"/>
+      <line x1="7.1" y1="7.1" x2="32.9" y2="32.9" stroke="#29B5E8" strokeWidth="2.5" strokeLinecap="round"/>
+      <line x1="32.9" y1="7.1" x2="7.1" y2="32.9" stroke="#29B5E8" strokeWidth="2.5" strokeLinecap="round"/>
+      {/* Branches haut */}
+      <line x1="20" y1="3" x2="15" y2="8" stroke="#29B5E8" strokeWidth="2" strokeLinecap="round"/>
+      <line x1="20" y1="3" x2="25" y2="8" stroke="#29B5E8" strokeWidth="2" strokeLinecap="round"/>
+      {/* Branches bas */}
+      <line x1="20" y1="37" x2="15" y2="32" stroke="#29B5E8" strokeWidth="2" strokeLinecap="round"/>
+      <line x1="20" y1="37" x2="25" y2="32" stroke="#29B5E8" strokeWidth="2" strokeLinecap="round"/>
+      {/* Branches gauche */}
+      <line x1="3" y1="20" x2="8" y2="15" stroke="#29B5E8" strokeWidth="2" strokeLinecap="round"/>
+      <line x1="3" y1="20" x2="8" y2="25" stroke="#29B5E8" strokeWidth="2" strokeLinecap="round"/>
+      {/* Branches droite */}
+      <line x1="37" y1="20" x2="32" y2="15" stroke="#29B5E8" strokeWidth="2" strokeLinecap="round"/>
+      <line x1="37" y1="20" x2="32" y2="25" stroke="#29B5E8" strokeWidth="2" strokeLinecap="round"/>
+      {/* Centre */}
+      <circle cx="20" cy="20" r="3" fill="#29B5E8"/>
+    </svg>
+  );
+}
+
+export function AILogo() {
+  return (
+    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+      {/* Cerveau stylisé */}
+      <circle cx="20" cy="20" r="11" stroke="#A78BFA" strokeWidth="2.2" fill="none"/>
+      {/* Connexions neuronales */}
+      <circle cx="20" cy="20" r="3" fill="#A78BFA"/>
+      <line x1="20" y1="9" x2="20" y2="17" stroke="#A78BFA" strokeWidth="1.8" strokeLinecap="round"/>
+      <line x1="20" y1="23" x2="20" y2="31" stroke="#A78BFA" strokeWidth="1.8" strokeLinecap="round"/>
+      <line x1="9" y1="20" x2="17" y2="20" stroke="#A78BFA" strokeWidth="1.8" strokeLinecap="round"/>
+      <line x1="23" y1="20" x2="31" y2="20" stroke="#A78BFA" strokeWidth="1.8" strokeLinecap="round"/>
+      <line x1="12.2" y1="12.2" x2="17.9" y2="17.9" stroke="#A78BFA" strokeWidth="1.5" strokeLinecap="round"/>
+      <line x1="22.1" y1="22.1" x2="27.8" y2="27.8" stroke="#A78BFA" strokeWidth="1.5" strokeLinecap="round"/>
+      <line x1="27.8" y1="12.2" x2="22.1" y2="17.9" stroke="#A78BFA" strokeWidth="1.5" strokeLinecap="round"/>
+      <line x1="17.9" y1="22.1" x2="12.2" y2="27.8" stroke="#A78BFA" strokeWidth="1.5" strokeLinecap="round"/>
+      {/* Noeuds */}
+      <circle cx="20" cy="9" r="2" fill="#A78BFA"/>
+      <circle cx="20" cy="31" r="2" fill="#A78BFA"/>
+      <circle cx="9" cy="20" r="2" fill="#A78BFA"/>
+      <circle cx="31" cy="20" r="2" fill="#A78BFA"/>
+    </svg>
+  );
+}
+
+export function ScrumLogo() {
+  return (
+    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+      {/* Cercle sprint */}
+      <path d="M20 6 A14 14 0 1 1 6.5 25" stroke="#7C3AED" strokeWidth="2.8" strokeLinecap="round"/>
+      {/* Flèche */}
+      <polygon points="6.5,25 3,17 13,18" fill="#7C3AED"/>
+      {/* Texte SCR */}
+      <text x="20" y="25" textAnchor="middle" fill="#7C3AED" fontSize="9" fontWeight="800" fontFamily="sans-serif">SCR</text>
+    </svg>
+  );
+}
+
 export function ReactLogo() {
   return (
     <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">

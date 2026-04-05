@@ -51,6 +51,12 @@ export function Sidebar() {
               {link.icon}
             </a>
           ))}
+          <a href="/cv" target="_blank" title="Voir mon CV">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" className="group">
+              <circle cx="20" cy="20" r="20" fill="currentColor" className="group-hover:fill-[#F8937C]" />
+              <text x="20" y="25" textAnchor="middle" fill="#0e1117" fontSize="13" fontWeight="700" fontFamily="sans-serif">CV</text>
+            </svg>
+          </a>
         </div>
       </InfoSection>
     </div>
