@@ -5,6 +5,7 @@ import { Sidebar } from "./components/organisms/Sidebar";
 import { Presentation } from "./components/organisms/Presentation";
 import Experiences from "./components/organisms/Experiences";
 import Projects from "./components/organisms/Projects";
+import { RelocationBanner } from "./components/organisms/RelocationBanner";
 
 export default function Home() {
   const sectionRefs = [
@@ -25,12 +26,15 @@ export default function Home() {
     <main className="flex flex-col">
       <Header tab={tab} handleTabClick={handleTabClick} />
       <section className='w-full m-auto flex justify-center'>
-        <div className="w-full max-w-[1216px] xl:px-0 px-4 flex flex-col md:flex-row gap-5">
-          <Sidebar />
-          <div className="flex flex-col min-w-0 w-full">
-            <Presentation sectionRef={sectionRefs[0]} />
-            <Experiences sectionRef={sectionRefs[1]} />
-            <Projects sectionRef={sectionRefs[2]} />
+        <div className="w-full max-w-[1216px] xl:px-0 px-4 flex flex-col gap-5">
+          <RelocationBanner />
+          <div className="flex flex-col md:flex-row gap-5">
+            <Sidebar />
+            <div className="flex flex-col min-w-0 w-full">
+              <Presentation sectionRef={sectionRefs[0]} />
+              <Experiences sectionRef={sectionRefs[1]} />
+              <Projects sectionRef={sectionRefs[2]} />
+            </div>
           </div>
         </div>
       </section>
