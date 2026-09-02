@@ -64,25 +64,20 @@ export default function CV() {
           html, body { margin: 0; padding: 0; }
           * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
           .cv-print-root {
-            zoom: 0.78;
-            width: calc(206mm / 0.78) !important;
-            height: calc(293mm / 0.78) !important;
+            width: 206mm !important;
+            height: 293mm !important;
             min-height: unset !important;
             padding: 16px !important;
             box-sizing: border-box !important;
             overflow: hidden !important;
-            display: flex !important;
-            flex-direction: column !important;
           }
           .cv-inner {
-            flex: 1 !important;
-            max-width: 100% !important;
-            margin: 0 auto !important;
-            display: flex !important;
-            flex-direction: column !important;
+            width: 133.333% !important;
+            max-width: 133.333% !important;
+            margin: 0 !important;
             gap: 10px !important;
-            justify-content: flex-start !important;
-            justify-content: space-between !important;
+            transform: scale(0.75) !important;
+            transform-origin: top left !important;
           }
         }
       `}</style>

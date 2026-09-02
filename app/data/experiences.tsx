@@ -20,10 +20,9 @@ export const experiences: Experience[] = [
         highlights: [
             "SWORD : maintenance et évolution du levier produits sponsorisés, devenu back-up du lead dev.",
             "MAAC : promu Lead Développeur, pilotage technique des projets de publicité et d'affiliation.",
-            "Conception de traitements de données événementielles (Kafka, MongoDB, Snowflake) et intégrations ETL (Talend).",
-            "Collaboration rapprochée avec les profils Data (MLE, DS, DA) pour intégrer de l'IA sur le levier publicitaire.",
+            "Collaboration rapprochée avec les profils Data (MLE, DS, DA) pour intégrer de l'IA",
         ],
-        stack: ['.NET', 'Talend', 'Kafka', 'MongoDB', 'Snowflake', 'SQL', 'Azure DevOps', 'Git', 'IA'],
+        stack: ['.NET', 'Kafka', 'Java', 'React', 'MongoDB', 'Snowflake', 'SQL Server', 'Azure DevOps', 'Git', 'Jira', 'IA','Talend'],
     },
     {
         id: 2, organization: 'Group Créative (Cdiscount)', role: 'Développeur .NET Full-Stack', type: 'work',
@@ -33,7 +32,7 @@ export const experiences: Experience[] = [
             "CT Lib : maintenance des librairies .NET génériques utilisées par l'ensemble des développeurs Cdiscount.",
             "OPECO : bons de réduction et prix barré, mise en conformité suite à la loi Omnibus.",
         ],
-        stack: ['.NET', '.NET Framework', 'React', 'Java', 'Kafka', 'MongoDB', 'SQL Server', 'Azure DevOps', 'TFS', 'Git'],
+        stack: ['.NET', '.NET Framework', 'React', 'Kafka', 'MongoDB', 'SQL Server', 'Azure DevOps', 'Git', 'Jira'],
     },
     {
         id: 3, organization: 'Gestform', role: 'Développeur .NET', type: 'work',
