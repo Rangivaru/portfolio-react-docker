@@ -38,6 +38,8 @@ function mergeByOrg(exps: Experience[]): Experience[] {
     if (existing) {
       if (exp.startDate < existing.startDate) existing.startDate = exp.startDate;
       if (exp.endDate === 'present' || exp.endDate > existing.endDate) existing.endDate = exp.endDate;
+      existing.highlights = [...(existing.highlights ?? []), ...(exp.highlights ?? [])];
+      existing.stack = Array.from(new Set([...(existing.stack ?? []), ...(exp.stack ?? [])]));
     } else {
       acc.push({ ...exp });
     }
@@ -62,25 +64,20 @@ export default function CV() {
           html, body { margin: 0; padding: 0; }
           * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
           .cv-print-root {
-            zoom: 0.76;
-            width: calc(206mm / 0.76) !important;
-            height: calc(293mm / 0.76) !important;
+            width: 206mm !important;
+            height: 293mm !important;
             min-height: unset !important;
             padding: 16px !important;
             box-sizing: border-box !important;
             overflow: hidden !important;
-            display: flex !important;
-            flex-direction: column !important;
           }
           .cv-inner {
-            flex: 1 !important;
-            max-width: 100% !important;
-            margin: 0 auto !important;
-            display: flex !important;
-            flex-direction: column !important;
+            width: 133.333% !important;
+            max-width: 133.333% !important;
+            margin: 0 !important;
             gap: 10px !important;
-            justify-content: flex-start !important;
-            justify-content: space-between !important;
+            transform: scale(0.75) !important;
+            transform-origin: top left !important;
           }
         }
       `}</style>
@@ -205,16 +202,48 @@ export default function CV() {
             <p style={heading(true)}>
               EXPÉRIENCES <span style={{ color: C.textLight }}>PROFESSIONNELLES</span>
             </p>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '18px' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
               {workExps.map(exp => (
                 <div key={exp.id} style={{ borderLeft: `3px solid ${C.accent}`, paddingLeft: '14px' }}>
-                  <p style={{ color: C.gold, fontSize: '0.66rem', marginBottom: '4px' }}>
-                    {formatDateRange(exp.startDate, exp.endDate)}
-                  </p>
-                  <p style={{ color: C.accent, fontWeight: 700, fontSize: '0.82rem', marginBottom: '4px' }}>
-                    {exp.organization}
-                  </p>
-                  <p style={{ color: C.textLight, fontSize: '0.76rem' }}>{exp.role}</p>
+                  <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', gap: '10px', flexWrap: 'wrap' }}>
+                    <p style={{ color: C.accent, fontWeight: 700, fontSize: '0.82rem' }}>
+                      {exp.organization}
+                      <span style={{ color: C.textLight, fontWeight: 500 }}> — {exp.role}</span>
+                    </p>
+                    <p style={{ color: C.gold, fontSize: '0.66rem', whiteSpace: 'nowrap' }}>
+                      {formatDateRange(exp.startDate, exp.endDate)}
+                    </p>
+                  </div>
+
+                  {exp.context && (
+                    <p style={{ color: C.textMuted, fontSize: '0.68rem', fontStyle: 'italic', marginTop: '2px' }}>
+                      {exp.context}
+                    </p>
+                  )}
+
+                  {exp.highlights && exp.highlights.length > 0 && (
+                    <ul style={{ margin: '5px 0 0', paddingLeft: '14px', listStyleType: 'disc' }}>
+                      {exp.highlights.map((h, i) => (
+                        <li key={i} style={{ color: C.textLight, fontSize: '0.7rem', lineHeight: 1.5, marginBottom: '1px' }}>
+                          {h}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+
+                  {exp.stack && exp.stack.length > 0 && (
+                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '5px', marginTop: '6px' }}>
+                      {exp.stack.map(t => (
+                        <span key={t} style={{
+                          backgroundColor: '#E8D9C0', border: `1px solid ${C.cardBorder}`,
+                          borderRadius: '20px', padding: '1px 8px',
+                          color: C.textLight, fontSize: '0.6rem',
+                        }}>
+                          {t}
+                        </span>
+                      ))}
+                    </div>
+                  )}
                 </div>
               ))}
             </div>
