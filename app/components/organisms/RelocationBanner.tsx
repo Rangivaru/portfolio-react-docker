@@ -6,7 +6,7 @@ export function RelocationBanner() {
         <strong>De retour à Tahiti le 5 octobre 2026</strong> — je recherche une opportunité de Développeur / Lead Développeur sur place, disponible pour une prise de poste à partir de mi-octobre.
       </p>
       <a
-        href="mailto:rangivaru.salem@gmail.com"
+        href="mailto:salem.rangivaru@gmail.com"
         className="rounded-md py-2 px-4 font-medium text-sm bg-orange text-center hover:bg-orange-light whitespace-nowrap shrink-0"
       >
         Me contacter
