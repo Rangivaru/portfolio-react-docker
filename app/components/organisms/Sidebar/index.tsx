@@ -22,10 +22,10 @@ export function Sidebar() {
 
       {/* Email */}
       <a
-        href="mailto:rangivaru.salem@gmail.com"
+        href="mailto:salem.rangivaru@gmail.com"
         className="w-full rounded-md py-2 font-medium text-sm bg-orange text-center hover:bg-orange-light mt-4"
       >
-        rangivaru.salem@gmail.com
+        salem.rangivaru@gmail.com
       </a>
 
       {/* Infos */}

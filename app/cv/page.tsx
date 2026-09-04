@@ -155,7 +155,7 @@ export default function CV() {
             <div style={card}>
               <p style={heading()}>CONTACT</p>
               {[
-                'rangivaru.salem@gmail.com',
+                'salem.rangivaru@gmail.com',
                 'Bordeaux, 33000',
                 '31 ans',
                 'https://www.linkedin.com/in/rangivaru-salem-8a9444135/',
