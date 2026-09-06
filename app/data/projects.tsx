@@ -26,8 +26,22 @@ const FIGMA_NAME = "Figma";
 const TAILWIND_NAME = "Tailwind CSS";
 const TYPESCRIPT_NAME = "TypeScript";
 export const projects: ProjectsDTO[] = [
+    
     {
         id: 1,
+        year: 2024,
+        title: "Interactive Roadmap",
+        description: "Roadmap interactive pour tickets Jira, avec moteur d'estimation d'avancement et de charge d'équipe.",
+        href: "/projects/int-roa",
+        technos: [
+            {color: NEXT_COLOR, label: NEXT_NAME},
+            {color: REACT_COLOR, label: REACT_NAME},
+            {color: TAILWIND_COLOR, label: TAILWIND_NAME},
+            {color: TYPESCRIPT_COLOR, label: TYPESCRIPT_NAME},
+        ],
+    },
+    {
+        id: 2,
         year: 2025,
         title: "Portfolio",
         description: "Portfolio personnel présentant mes projets et compétences.",
@@ -35,21 +49,9 @@ export const projects: ProjectsDTO[] = [
         technos: [
             {color: NEXT_COLOR, label: NEXT_NAME},
             {color: REACT_COLOR, label: REACT_NAME},
-            {color: NODE_COLOR, label: NODE_NAME},
-            {color: FIGMA_COLOR, label: FIGMA_NAME},
-        ],
-    },
-    {
-        id: 2,
-        year: 2025,
-        title: "Interactive Roadmap",
-        description: "Roadmap Gantt interactive pour thèmes, epics et tickets Jira, avec moteur d'estimation d'avancement et de charge d'équipe.",
-        href: "/projects/int-roa",
-        technos: [
-            {color: NEXT_COLOR, label: NEXT_NAME},
-            {color: REACT_COLOR, label: REACT_NAME},
             {color: TAILWIND_COLOR, label: TAILWIND_NAME},
             {color: TYPESCRIPT_COLOR, label: TYPESCRIPT_NAME},
+            {color: FIGMA_COLOR, label: FIGMA_NAME},
         ],
     }
 ];
