@@ -1,17 +1,13 @@
+import Link from "next/link";
 import { projects, type ProjectsDTO } from "@/app/data/projects";
 
 interface ProjectsProps {
     sectionRef: any;
 }
 
-function ProjectCard({ project }: { project: ProjectsDTO }) {
+function ProjectCardBody({ project }: { project: ProjectsDTO }) {
     return (
-        <a
-            href={project.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group flex flex-col rounded-md border border-gray-border bg-gray p-5 hover:border-gray-light transition-colors duration-200"
-        >
+        <>
             <div className="flex justify-between items-start mb-3 gap-2">
                 <h4 className="font-semibold text-sm leading-snug group-hover:text-orange transition-colors">
                     {project.title}
@@ -29,6 +25,24 @@ function ProjectCard({ project }: { project: ProjectsDTO }) {
                     </span>
                 ))}
             </div>
+        </>
+    );
+}
+
+const cardClassName = "group flex flex-col rounded-md border border-gray-border bg-gray p-5 hover:border-gray-light transition-colors duration-200";
+
+function ProjectCard({ project }: { project: ProjectsDTO }) {
+    if (project.href.startsWith("/")) {
+        return (
+            <Link href={project.href} className={cardClassName}>
+                <ProjectCardBody project={project} />
+            </Link>
+        );
+    }
+
+    return (
+        <a href={project.href} target="_blank" rel="noopener noreferrer" className={cardClassName}>
+            <ProjectCardBody project={project} />
         </a>
     );
 }
