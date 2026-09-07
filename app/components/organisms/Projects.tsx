@@ -47,7 +47,28 @@ function ProjectCard({ project }: { project: ProjectsDTO }) {
     );
 }
 
+function ProjectGroup({ label, items }: { label: string; items: ProjectsDTO[] }) {
+    if (items.length === 0) return null;
+
+    return (
+        <div className="flex flex-col gap-4">
+            <div className="flex items-center gap-3">
+                <span className="text-xs uppercase tracking-widest text-gray-light shrink-0">{label}</span>
+                <div className="flex-1 h-px bg-gray-border" />
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                {items.map(project => (
+                    <ProjectCard key={project.id} project={project} />
+                ))}
+            </div>
+        </div>
+    );
+}
+
 export default function Projects({ sectionRef }: ProjectsProps) {
+    const proProjects = projects.filter(project => project.category === 'pro');
+    const personalProjects = projects.filter(project => project.category === 'personal');
+
     return (
         <div className="w-full" id="projets" ref={sectionRef}>
             <h3 className="text-3xl mb-8 mt-16 uppercase font-semibold">Projets</h3>
@@ -56,10 +77,9 @@ export default function Projects({ sectionRef }: ProjectsProps) {
                     <p className="text-gray-light text-sm">Les projets arrivent bientôt...</p>
                 </div>
             ) : (
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                    {projects.map(project => (
-                        <ProjectCard key={project.id} project={project} />
-                    ))}
+                <div className="flex flex-col gap-8">
+                    <ProjectGroup label="Professionnel" items={proProjects} />
+                    <ProjectGroup label="Personnel" items={personalProjects} />
                 </div>
             )}
         </div>
